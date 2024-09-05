@@ -63,8 +63,25 @@ namespace Laba1_Sem_1
             int c = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите число d");
             int d = Convert.ToInt32(Console.ReadLine());
-            double Z = (a / c) * (b / d) - ((a * b - c) / c * d) + Math.Sqrt(d);
+            double Z = (a / c) * (b / d) - ((a * b - c) / (c * d)) + Math.Sqrt(d);
             Console.WriteLine($"Число {Z}ё");
+
+
+            Console.WriteLine("Задание 6:");
+            Console.WriteLine("Введите длину первой стороны треугольника:");
+            double s1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите длину второй стороны треугольника:");
+            double s2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите длину третий стороны треугольника:");
+            double s3 = Convert.ToInt32(Console.ReadLine());
+            double p = (s1 + s2 + s3) / 2; 
+
+            Console.WriteLine(p.ToString());
+
+            double Ploshad = Math.Sqrt(p * (p - s1) * (p - s2) * (p - s3));
+
+            Console.WriteLine($"Площадь треугольника = {Ploshad}");
+
             Console.ReadLine();
             
         }
